@@ -1,3 +1,28 @@
+== Setting up, on windows
+
+1. Get rubyinstaller from http://rubyinstaller.org/downloads .
+
+2. Get msysgit.
+
+3. Get DevKit, install as per https://github.com/oneclick/rubyinstaller/wiki/Development-Kit .
+
+4. Install PostgreSQL.
+
+5. Ensure PostgreSQL is in path... go to a console and type 'postgres', path with spaces
+might not work ("Program Files" can be shortened to its DOS 8-chars equivalent, "Program~1".
+
+6. Create db in Postgres, and update the connection settings in config/database.yaml .
+
+7. Open a console in the project dir.
+
+8. Run 'bundle'.
+
+9. Run 'gem install <gem_name>' if necessary.
+
+10. Run 'rake db:migrate' to apply the migrations.
+
+11. Run 'rails s' to launch server, open http://localhost:3000 on a browser window.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
