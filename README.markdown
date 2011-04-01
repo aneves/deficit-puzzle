@@ -50,20 +50,7 @@ more separate. Each of these packages can be used independently outside of
 Rails. You can read more about Action Pack in
 link:files/vendor/rails/actionpack/README.html.
 
-
-## Getting Started
-
-1. At the command prompt, create a new Rails application:
-       `rails new myapp` (where `myapp` is the application name)
-
-2. Change directory to `myapp` and start the web server:
-       `cd myapp; rails server` (run with --help for options)
-
-3. Go to http://localhost:3000/ and you'll see:
-       "Welcome aboard: You're riding Ruby on Rails!"
-
-4. Follow the guidelines to start developing your application. You can find
-the following resources handy:
+## Resources
 
 * The Getting Started Guide: http://guides.rubyonrails.org/getting_started.html
 * Ruby on Rails Tutorial Book: http://www.railstutorial.org/
@@ -180,40 +167,40 @@ PostgreSQL and SQLite 3.
 
 The default directory structure of a generated Ruby on Rails application:
 
-  |-- app
-  |   |-- controllers
-  |   |-- helpers
-  |   |-- mailers
-  |   |-- models
-  |   `-- views
-  |       `-- layouts
-  |-- config
-  |   |-- environments
-  |   |-- initializers
-  |   `-- locales
-  |-- db
-  |-- doc
-  |-- lib
-  |   `-- tasks
-  |-- log
-  |-- public
-  |   |-- images
-  |   |-- javascripts
-  |   `-- stylesheets
-  |-- script
-  |-- test
-  |   |-- fixtures
-  |   |-- functional
-  |   |-- integration
-  |   |-- performance
-  |   `-- unit
-  |-- tmp
-  |   |-- cache
-  |   |-- pids
-  |   |-- sessions
-  |   `-- sockets
-  `-- vendor
-      `-- plugins
+    |-- app
+    |   |-- controllers
+    |   |-- helpers
+    |   |-- mailers
+    |   |-- models
+    |   |-- views
+    |       |-- layouts
+    |-- config
+    |   |-- environments
+    |   |-- initializers
+    |   |-- locales
+    |-- db
+    |-- doc
+    |-- lib
+    |   |-- tasks
+    |-- log
+    |-- public
+    |   |-- images
+    |   |-- javascripts
+    |   |-- stylesheets
+    |-- script
+    |-- test
+    |   |-- fixtures
+    |   |-- functional
+    |   |-- integration
+    |   |-- performance
+    |   |-- unit
+    |-- tmp
+    |   |-- cache
+    |   |-- pids
+    |   |-- sessions
+    |   |-- sockets
+    |-- vendor
+        |-- plugins
 
 app
   Holds all the code that's specific to this particular application.
