@@ -1,0 +1,27 @@
+<h1>Listing proposals</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Amount saved</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @proposals.each do |proposal| %>
+  <tr>
+    <td><%= proposal.title %></td>
+    <td><%= proposal.description %></td>
+    <td><%= proposal.amount_saved %></td>
+    <td><%= link_to 'Show', proposal %></td>
+    <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
+    <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Proposal', new_proposal_path %>
