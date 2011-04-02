@@ -1,5 +1,10 @@
 DeficitPuzzle::Application.routes.draw do
-  resources :proposals
+  resources :proposals do
+    member do
+      get 'approve'
+      get 'cancel'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

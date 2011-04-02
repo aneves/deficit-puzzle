@@ -48,4 +48,22 @@ class ProposalsController < ApplicationController
 
     redirect_to proposals_url
   end
+
+  # GET /proposals/1/approve
+  def approve
+    @proposal = Proposal.find(params[:id])
+    @proposal.approved = true
+    @proposal.save
+    
+    redirect_to proposals_url
+  end
+
+  # GET /proposals/1/cancel
+  def cancel
+    @proposal = Proposal.find(params[:id])
+    @proposal.approved = false
+    @proposal.save
+    
+    redirect_to proposals_url
+  end
 end
