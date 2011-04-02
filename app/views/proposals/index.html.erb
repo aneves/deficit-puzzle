@@ -5,16 +5,18 @@
     <th>Title</th>
     <th>Description</th>
     <th>Amount saved</th>
+    <th>Approved?</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @proposals.each do |proposal| %>
-  <tr>
+  <tr <%= "class='inactive'" unless proposal.approved %>>
     <td><%= proposal.title %></td>
     <td><%= proposal.description %></td>
     <td><%= proposal.amount_saved %></td>
+	<td><%= proposal.approved %></td>
     <td><%= link_to 'Show', proposal %></td>
     <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
     <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
