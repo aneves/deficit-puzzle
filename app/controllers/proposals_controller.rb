@@ -55,7 +55,7 @@ class ProposalsController < ApplicationController
     @proposal.approved = true
     @proposal.save
     
-    redirect_to proposals_url
+    redirect_to proposals_url, :notice => 'Proposal was approved.'
   end
 
   # GET /proposals/1/cancel
@@ -64,6 +64,6 @@ class ProposalsController < ApplicationController
     @proposal.approved = false
     @proposal.save
     
-    redirect_to proposals_url
+    redirect_to proposals_url, :notice => 'Proposal was cancelled.'
   end
 end
