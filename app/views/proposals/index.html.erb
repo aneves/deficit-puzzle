@@ -4,7 +4,7 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Effect</th>
+    <th>Impact</th>
     <th>Approved?</th>
     <th></th>
     <th></th>
@@ -15,7 +15,7 @@
   <tr <%= "class='inactive'" unless proposal.approved %>>
     <td><%= proposal.title %></td>
     <td><%= proposal.description %></td>
-    <td><%= proposal.effect %></td>
+    <td><%= proposal.impact %></td>
 	<td><%= if proposal.approved
 then
 link_to "cancel", cancel_proposal_path(proposal)
