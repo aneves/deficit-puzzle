@@ -18,18 +18,18 @@
     <td><%= proposal.impact %></td>
 	<td><%= if proposal.approved
 then
-link_to "cancel", cancel_proposal_path(proposal)
+link_to "cancel", cancel_admin_proposal_path(proposal)
 else
-link_to "approve", approve_proposal_path(proposal)
+link_to "approve", approve_admin_proposal_path(proposal)
 end
 %></td>
-    <td><%= link_to 'Show', proposal %></td>
-    <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
-    <td><%= link_to 'Destroy', proposal, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', admin_proposal_path(proposal) %></td>
+    <td><%= link_to 'Edit', edit_admin_proposal_path(proposal) %></td>
+    <td><%= button_to 'Destroy', admin_proposal_path(proposal), :method => :delete, :confirm => 'Are you sure?', :title => 'ololo' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Proposal', new_proposal_path %>
+<%= link_to 'New Proposal', new_admin_proposal_path %>

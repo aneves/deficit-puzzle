@@ -1,0 +1,11 @@
+<h1><%= pluralize @proposals.length, 'proposal' %></h1>
+
+<% if @proposals.any? %>
+	<ul>
+		<% @proposals.each do |proposal| %>
+			<li><%= proposal.title %> (<%= proposal.impact %>)</li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= link_to 'Admin', admin_proposals_path %>
