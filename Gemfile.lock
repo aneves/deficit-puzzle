@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/Krule/jquery-rails.git
+  revision: c99dcc97a6d3a2b3d5aecdbad1fb2800c9b470fc
+  specs:
+    jquery-rails (0.2.7)
+      railties (~> 3.0)
+      thor (~> 0.14.4)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -69,5 +77,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  jquery-rails!
   pg
   rails (= 3.0.5)
