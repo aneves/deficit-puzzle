@@ -27,7 +27,7 @@ class Admin::ProposalsController < ApplicationController
     @proposal = Proposal.new(params[:proposal])
 
     if @proposal.save
-      redirect_to admin_proposal_path(@proposal), :notice => 'Proposal was successfully created.'
+      redirect_to admin_proposals_path, :notice => 'Proposal was successfully created.'
     else
       render :action => "new"
     end
