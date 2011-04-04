@@ -23,9 +23,9 @@ else
 link_to "approve", approve_admin_proposal_path(proposal)
 end
 %></td>
-    <td><%= link_to 'Show', admin_proposal_path(proposal) %></td>
+    <td><%= link_to 'Show', [:admin, proposal] %></td>
     <td><%= link_to 'Edit', edit_admin_proposal_path(proposal) %></td>
-    <td><%= button_to 'Destroy', admin_proposal_path(proposal), :method => :delete, :confirm => 'Are you sure?', :title => 'ololo' %></td>
+    <td><%= button_to 'Destroy', [:admin, proposal], :method => :delete, :confirm => 'Are you sure?', :title => 'ololo' %></td>
   </tr>
 <% end %>
 </table>

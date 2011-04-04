@@ -55,7 +55,7 @@ class Admin::ProposalsController < ApplicationController
   def approve
     @proposal = Proposal.find(params[:id])
     @proposal.approved = true
-    @proposal.save
+    @proposal.save!
     
     redirect_to admin_proposals_url, :notice => 'Proposal was approved.'
   end
@@ -64,7 +64,7 @@ class Admin::ProposalsController < ApplicationController
   def cancel
     @proposal = Proposal.find(params[:id])
     @proposal.approved = false
-    @proposal.save
+    @proposal.save!
     
     redirect_to admin_proposals_url, :notice => 'Proposal was cancelled.'
   end
