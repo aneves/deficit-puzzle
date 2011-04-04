@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110403190700) do
+ActiveRecord::Schema.define(:version => 20110404015400) do
 
   create_table "proposals", :force => true do |t|
     t.string   "title"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20110403190700) do
     t.decimal  "impact"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "approved",    :default => false
+    t.boolean  "approved",    :default => true
   end
 
 end
