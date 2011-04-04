@@ -1,4 +1,6 @@
 class Admin::ProposalsController < ApplicationController
+  before_filter :admin_required
+
   # GET /admin/proposals
   def index
     @proposals = Proposal.order :id
