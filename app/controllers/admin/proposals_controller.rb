@@ -1,5 +1,6 @@
 class Admin::ProposalsController < ApplicationController
   before_filter :admin_required
+  layout 'admin'
 
   # GET /admin/proposals
   def index
