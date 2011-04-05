@@ -1,9 +1,23 @@
-<h1><%= pluralize @proposals.length, 'proposal' %></h1>
+<h1>Deficit puzzle: you fix the budget</h1>
 
+<h2>Progress</h2>
+<p id="status">
+	<span class="progress">
+		<span class="amount">0</span>/<span class="target"><%= @target %></span>
+		<%= @units %>
+	</span>
+	<span class="graph"><span class="bar">&nbsp;</span></span>
+	<span class="percent">0%</span>
+</p>
+
+<h2><%= pluralize @proposals.length, 'proposal' %></h2>
 <% if @proposals.any? %>
 	<ul>
 		<% @proposals.each do |proposal| %>
-			<li><%= proposal.title %> (<%= proposal.impact %>)</li>
+			<li><label>
+				<input type="checkbox" value="<%= proposal.impact %>" />
+				<%= proposal.title %> (<%= proposal.impact %>)
+			</label></li>
 		<% end %>
 	</ul>
 <% end %>
