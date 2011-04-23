@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110404015400) do
+ActiveRecord::Schema.define(:version => 20110423235500) do
 
   create_table "proposals", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(:version => 20110404015400) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "approved",    :default => true
+    t.integer  "theme_id",                      :null => false
+  end
+
+  create_table "themes", :force => true do |t|
+    t.string "title"
   end
 
 end

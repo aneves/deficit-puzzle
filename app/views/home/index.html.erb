@@ -10,14 +10,20 @@
 	<span class="percent">0%</span>
 </p>
 
-<h2><%= pluralize @proposals.length, 'proposal' %></h2>
-<% if @proposals.any? %>
+<h2><%= pluralize @themes.length, 'theme' %></h2>
+<% if @themes.any? %>
 	<ul>
-		<% @proposals.each do |proposal| %>
-			<li><label>
-				<input type="checkbox" value="<%= proposal.impact %>" />
-				<%= proposal.title %> (<%= proposal.impact %>)
-			</label></li>
+		<% @themes.each do |theme| %>
+			<li><%= theme.title %>
+				<ul>
+					<% theme.proposals.each do |proposal| %>
+						<li><label>
+							<input type="checkbox" value="<%= proposal.impact %>" />
+							<%= proposal.title %> (<%= proposal.impact %>)
+						</label></li>
+					<% end %>
+				</ul>
+			</li>
 		<% end %>
 	</ul>
 <% end %>

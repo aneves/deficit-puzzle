@@ -4,8 +4,6 @@ class CreateProposals < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.decimal :amount_saved
-
-      t.timestamps
     end
   end
 
