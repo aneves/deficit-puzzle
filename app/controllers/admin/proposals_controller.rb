@@ -1,4 +1,4 @@
-class Admin::ProposalsController < ApplicationController
+class Admin::ProposalsController < AdminController
   before_filter :admin_required
   layout 'admin'
 

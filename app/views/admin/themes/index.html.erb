@@ -1,0 +1,35 @@
+<h1>Listing themes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @themes.each do |theme| %>
+  <tr>
+    <th><%= theme.title %></th>
+    <td><%= link_to 'Show', [:admin, theme] %></td>
+    <td><%= link_to 'Edit', edit_admin_theme_path(theme) %></td>
+    <td><%= button_to 'Destroy', [:admin, theme], :method => :delete, :confirm => 'Are you sure?', :title => 'Permanently remove this theme' %></td>
+  </tr>
+  <tr>
+	<td>
+		<%= pluralize theme.proposals.length, 'proposals' %>
+		<% if theme.proposals.any? %>
+			<ul>
+				<% theme.proposals.each do |proposal| %>
+					<li><%= link_to proposal.title, [:admin, theme, proposal] %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Theme', new_admin_theme_path %>

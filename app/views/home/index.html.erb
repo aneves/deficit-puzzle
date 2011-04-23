@@ -12,20 +12,21 @@
 
 <h2><%= pluralize @themes.length, 'theme' %></h2>
 <% if @themes.any? %>
-	<ul>
-		<% @themes.each do |theme| %>
-			<li><%= theme.title %>
-				<ul>
-					<% theme.proposals.each do |proposal| %>
-						<li><label>
-							<input type="checkbox" value="<%= proposal.impact %>" />
-							<%= proposal.title %> (<%= proposal.impact %>)
-						</label></li>
-					<% end %>
-				</ul>
-			</li>
-		<% end %>
-	</ul>
+	<table>
+		<tbody>
+			<% @themes.each do |theme| %>
+				<tr><th><%= theme.title %></th></tr>
+				<tr><td>
+				<% theme.proposals.each do |proposal| %>
+					<li><label>
+						<input type="checkbox" value="<%= proposal.impact %>" />
+						<%= proposal.title %> (<%= proposal.impact %>)
+					</label></li>
+				<% end %>
+				</td></tr>
+			<% end %>
+		</tbody>
+	</table>
 <% end %>
 
-<%= link_to 'Admin', admin_proposals_path %>
+<%= link_to 'Admin', admin_themes_path %>
