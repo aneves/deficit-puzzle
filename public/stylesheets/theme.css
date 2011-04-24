@@ -21,7 +21,8 @@ a:visited { color: #666; }
 a:hover,
 a.button:hover { color: #fff; background-color:#000; }
 
-a.button {
+a.button,
+.button a {
 	text-decoration: none;
 }
 
@@ -33,17 +34,24 @@ a.button {
 	clear: right;
 	float: right;
 }
-a.button.static_message {
+.button.static_message {
 	padding: 10px;
 }
 
-a.button {
+a.button,
+.button a {
 	background-color: lightgray;
 	border: solid black 1px;
 	border-radius: 5px;
 	padding: 2px 7px;
-	display: inline-block;
 	margin: 1px;
+}
+a.button {
+	display: inline-block;
+}
+
+.suspended {
+	background-color: #E0E0E0;
 }
 
 div.field, div.actions {

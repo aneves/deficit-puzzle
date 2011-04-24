@@ -15,7 +15,7 @@
 		<% if theme.proposals.any? %>
 			<ul>
 				<% theme.proposals.each do |proposal| %>
-					<li>
+					<li <%= "class='suspended'" unless proposal.approved %>>
 						<%= link_to proposal.title, [:admin, theme, proposal] %>
 						<%= link_to 'Edit', edit_admin_theme_proposal_path(theme, proposal), :class => 'button' %>
 					</li>

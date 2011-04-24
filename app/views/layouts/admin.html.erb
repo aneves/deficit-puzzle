@@ -8,7 +8,9 @@
 </head>
 <body>
 
-<%= link_to 'to frontpage', proposals_path, :class => 'static_message button big' %>
+<%= link_to 'to frontpage', proposals_path, :class => 'static_message button' %>
+
+<h1 class="button"><%= link_to 'home', :admin_root %></h1>
 
 <%= yield %>
 
