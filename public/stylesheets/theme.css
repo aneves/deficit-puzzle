@@ -54,6 +54,11 @@ a.button {
 	background-color: #E0E0E0;
 }
 
+table.themes td,
+table.themes td>ul {
+	padding-left: 20px;
+}
+
 div.field, div.actions {
   margin-bottom: 10px;
 }

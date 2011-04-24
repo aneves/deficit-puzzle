@@ -1,6 +1,6 @@
-<h1>Listing themes</h1>
+<h2>Listing themes</h2>
 
-<table>
+<table class="themes">
 <% @themes.each do |theme| %>
   <tr>
 	<th>
@@ -12,17 +12,18 @@
   <tr>
 	<td colspan="3">
 		<%= pluralize theme.proposals.length, 'proposal' %>
+		<%= link_to 'New Proposal', new_admin_theme_proposal_path(theme), :class => 'button' %>
 		<% if theme.proposals.any? %>
 			<ul>
 				<% theme.proposals.each do |proposal| %>
 					<li <%= "class='suspended'" unless proposal.approved %>>
 						<%= link_to proposal.title, [:admin, theme, proposal] %>
+						(<%= proposal.impact %>)
 						<%= link_to 'Edit', edit_admin_theme_proposal_path(theme, proposal), :class => 'button' %>
 					</li>
 				<% end %>
 			</ul>
 		<% end %>
-		<%= link_to 'New Proposal', new_admin_theme_proposal_path(theme), :class => 'button' %>
 	</td>
   </tr>
 <% end %>
