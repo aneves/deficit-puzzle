@@ -1,8 +1,9 @@
 DeficitPuzzle::Application.routes.draw do
   
   namespace :admin do
-    root :to => 'admin/themes#index'
+    root :to => 'themes#index'
 	resources :themes do
+		root :to => '#index'
 		resources :proposals do
 		  member do
 			get 'approve'
