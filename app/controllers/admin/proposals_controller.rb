@@ -38,7 +38,7 @@ class Admin::ProposalsController < AdminController
     @proposal = Proposal.find(params[:id])
 
     if @proposal.update_attributes(params[:proposal])
-      redirect_to admin_proposal_path(@proposal), :notice => 'Proposal was successfully updated.'
+      redirect_to [:admin, @proposal.theme, @proposal], :notice => 'Proposal was successfully updated.'
     else
       render :action => "edit"
     end

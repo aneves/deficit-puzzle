@@ -38,7 +38,7 @@ class Admin::ThemesController < AdminController
     @theme = Theme.find(params[:id])
 
     if @theme.update_attributes(params[:theme])
-      redirect_to admin_theme_path(@theme), :notice => 'Theme was successfully updated.'
+      redirect_to [:admin, @theme], :notice => 'Theme was successfully updated.'
     else
       render :action => "edit"
     end

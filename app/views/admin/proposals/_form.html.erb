@@ -1,4 +1,4 @@
-<%= form_for([:admin, @proposal]) do |f| %>
+<%= form_for([:admin, @proposal.theme, @proposal]) do |f| %>
   <% if @proposal.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@proposal.errors.count, "error") %> prohibited this proposal from being saved:</h2>
