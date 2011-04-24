@@ -16,6 +16,19 @@ a { color: #000; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
+.static_message {
+	clear: right;
+	float: right;
+	background: lightgray;
+	border: solid black 1px;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+a.button.big {
+	display: inline-block;
+}
+
 div.field, div.actions {
   margin-bottom: 10px;
 }
