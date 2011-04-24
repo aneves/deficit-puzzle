@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   def index
     @themes = Theme.order :id
     @target = 450
-    @units = "units"
+    @units = ""
   end
 end

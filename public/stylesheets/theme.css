@@ -12,21 +12,32 @@ pre {
   font-size: 11px;
 }
 
+th {
+	text-align: left;
+}
+
 a { color: #000; }
 a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+a:hover,
+a.button:hover { color: #fff; background-color:#000; }
+
+.button_to {
+	display: inline-block;
+}
 
 .static_message {
 	clear: right;
 	float: right;
-	background: lightgray;
-	border: solid black 1px;
-	border-radius: 5px;
+}
+a.button.static_message {
 	padding: 10px;
 }
 
-a.button.big {
-	display: inline-block;
+a.button {
+	background-color: lightgray;
+	border: solid black 1px;
+	border-radius: 5px;
+	padding: 2px 7px;
 }
 
 div.field, div.actions {
