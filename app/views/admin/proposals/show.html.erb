@@ -15,6 +15,17 @@
   <%= @proposal.impact %>
 </p>
 
+<p>
+  <b>Approved:</b>
+  <%= @proposal.approved %>
+</p>
 
-<%= link_to 'Edit', edit_admin_theme_proposal_path(@proposal) %> |
-<%= link_to 'Back', admin_theme_proposals_path %>
+
+<%= link_to 'Edit', edit_admin_theme_proposal_path(@theme, @proposal), :class => 'button' %>
+<%= if @proposal.approved
+then
+	link_to "suspend", suspend_admin_theme_proposal_path(@theme, @proposal), :class => 'button'
+else
+	link_to "approve", approve_admin_theme_proposal_path(@theme, @proposal), :class => 'button'
+end %>
+<%= link_to 'Back', admin_themes_path, :class => 'button' %>

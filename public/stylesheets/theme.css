@@ -42,6 +42,8 @@ a.button {
 	border: solid black 1px;
 	border-radius: 5px;
 	padding: 2px 7px;
+	display: inline-block;
+	margin: 1px;
 }
 
 div.field, div.actions {

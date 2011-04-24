@@ -18,13 +18,13 @@
     <td><%= proposal.impact %></td>
 	<td><%= if proposal.approved
 then
-link_to "cancel", cancel_admin_theme_proposal_path(proposal.theme, proposal)
+link_to "suspend", suspend_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button'
 else
-link_to "approve", approve_admin_theme_proposal_path(proposal.theme, proposal)
+link_to "approve", approve_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button'
 end
 %></td>
-    <td><%= link_to 'Show', [:admin, proposal.theme, proposal] %></td>
-    <td><%= link_to 'Edit', edit_admin_theme_proposal_path(proposal.theme, proposal) %></td>
+    <td><%= link_to 'Show', [:admin, proposal.theme, proposal], :class => 'button' %></td>
+    <td><%= link_to 'Edit', edit_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button' %></td>
     <td><%= button_to 'Destroy', [:admin, proposal.theme, proposal], :method => :delete, :confirm => 'Are you sure?', :title => 'Permanently remove this proposal.' %></td>
   </tr>
 <% end %>
@@ -32,4 +32,5 @@ end
 
 <br />
 
-<%= link_to 'New Proposal', new_admin_theme_proposal_path %>
+<%= link_to 'New Proposal', new_admin_theme_proposal_path, :class => 'button' %>
+<%= link_to 'Back', admin_themes_path, :class => 'button' %>

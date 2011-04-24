@@ -1,5 +1,6 @@
 class Admin::ProposalsController < AdminController
   before_filter :admin_required
+  before_filter :load_theme
   layout 'admin'
 
   # GET /admin/theme/:theme_id/proposals
@@ -15,13 +16,11 @@ class Admin::ProposalsController < AdminController
   # GET /admin/theme/:theme_id/proposals/new
   def new
     @proposal = Proposal.new
-    @theme = Theme.find(params[:theme_id])
   end
 
   # GET /admin/theme/:theme_id/proposals/:id/edit
   def edit
     @proposal = Proposal.find(params[:id])
-    @theme = Theme.find(params[:theme_id])
   end
 
   # POST /admin/theme/:theme_id/proposals
@@ -58,19 +57,25 @@ class Admin::ProposalsController < AdminController
 
   # GET /admin/theme/:theme_id/proposals/:id/approve
   def approve
-    @proposal = Proposal.find(params[:id])
-    @proposal.approved = true
-    @proposal.save!
+    proposal = Proposal.find(params[:id])
+    proposal.approved = true
+    proposal.save!
     
-    redirect_to admin_theme_proposals_url, :notice => 'Proposal was approved.'
+    redirect_to [:admin, @theme, proposal], :notice => 'Proposal was approved.'
   end
 
-  # GET /admin/theme/:theme_id/proposals/:id/cancel
-  def cancel
-    @proposal = Proposal.find(params[:id])
-    @proposal.approved = false
-    @proposal.save!
+  # GET /admin/theme/:theme_id/proposals/:id/suspend
+  def suspend
+    proposal = Proposal.find(params[:id])
+    proposal.approved = false
+    proposal.save!
     
-    redirect_to admin_theme_proposals_url, :notice => 'Proposal was cancelled.'
+    redirect_to [:admin, @theme, proposal], :notice => 'Proposal was suspended.'
+  end
+  
+  protected
+  def load_theme
+	# TODO: load as method/property? Memoized.
+    @theme = Theme.find(params[:theme_id])
   end
 end

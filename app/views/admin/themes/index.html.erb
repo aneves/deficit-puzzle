@@ -15,11 +15,14 @@
 		<% if theme.proposals.any? %>
 			<ul>
 				<% theme.proposals.each do |proposal| %>
-					<li><%= link_to proposal.title, [:admin, theme, proposal] %></li>
+					<li>
+						<%= link_to proposal.title, [:admin, theme, proposal] %>
+						<%= link_to 'Edit', edit_admin_theme_proposal_path(theme, proposal), :class => 'button' %>
+					</li>
 				<% end %>
 			</ul>
 		<% end %>
-		<%= link_to 'New Proposal', new_admin_theme_proposal_path(theme) %>
+		<%= link_to 'New Proposal', new_admin_theme_proposal_path(theme), :class => 'button' %>
 	</td>
   </tr>
 <% end %>
@@ -27,4 +30,4 @@
 
 <br />
 
-<%= link_to 'New Theme', new_admin_theme_path %>
+<%= link_to 'New Theme', new_admin_theme_path, :class => 'button' %>

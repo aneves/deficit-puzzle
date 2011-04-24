@@ -6,7 +6,7 @@ DeficitPuzzle::Application.routes.draw do
 		resources :proposals do
 		  member do
 			get 'approve'
-			get 'cancel'
+			get 'suspend'
 		  end
 		end
 	end
