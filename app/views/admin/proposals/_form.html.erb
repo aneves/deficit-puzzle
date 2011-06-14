@@ -2,6 +2,10 @@
   <%= render :partial => "admin/errors", :locals => {:errors => @proposal.errors} %>
 
   <div class="field">
+    <%= f.label :theme %><br />
+    <%= f.select :theme_id, Theme.all.collect{ |theme| [theme.title, theme.id] } %>
+  </div>
+  <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>

@@ -16,6 +16,7 @@ class Admin::ProposalsController < AdminController
   # GET /admin/theme/:theme_id/proposals/new
   def new
     @proposal = Proposal.new
+    @proposal.theme_id = params[:theme_id]
   end
 
   # GET /admin/theme/:theme_id/proposals/:id/edit
