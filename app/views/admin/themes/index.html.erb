@@ -5,13 +5,15 @@
   <tr <%= "class='suspended'" unless theme.approved %>>
 	<th>
 		<%= theme.title %>
+	</th>
+	<td>
 		<%= approve_button_for theme %>
 		<%= link_to 'Edit', edit_admin_theme_path(theme), :class => 'button' %>
 		<%= button_to 'Destroy', [:admin, theme], :method => :delete, :confirm => 'Are you sure?', :title => 'Permanently remove this theme' %>
-	</th>
+	</td>
   </tr>
   <tr <%= "class='suspended'" unless theme.approved %>>
-	<td colspan="3">
+	<td colspan="2">
 		<%= pluralize theme.proposals.length, 'proposal' %>
 		<%= link_to 'New Proposal', new_admin_theme_proposal_path(theme), :class => 'button' %>
 		<% if theme.proposals.any? %>

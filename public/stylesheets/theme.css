@@ -54,6 +54,9 @@ a.button {
 .suspended {
 	background-color: #E0E0E0;
 }
+.suspended .suspended {
+	background-color: #D0D0D0;
+}
 
 table.themes td,
 table.themes td>ul {
