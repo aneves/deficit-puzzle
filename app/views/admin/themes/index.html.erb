@@ -7,26 +7,18 @@
 		<%= theme.title %>
 	</th>
 	<td>
-		<%= approve_button_for theme %>
+		<%= if theme.approved
+		      link_to "suspend", suspend_admin_theme_path(theme), :class => 'button'
+		    else
+		      link_to "approve", approve_admin_theme_path(theme), :class => 'button'
+		    end %>
 		<%= link_to 'Edit', edit_admin_theme_path(theme), :class => 'button' %>
 		<%= button_to 'Destroy', [:admin, theme], :method => :delete, :confirm => 'Are you sure?', :title => 'Permanently remove this theme' %>
 	</td>
   </tr>
   <tr <%= "class='suspended'" unless theme.approved %>>
 	<td colspan="2">
-		<%= pluralize theme.proposals.length, 'proposal' %>
-		<%= link_to 'New Proposal', new_admin_theme_proposal_path(theme), :class => 'button' %>
-		<% if theme.proposals.any? %>
-			<ul>
-				<% theme.proposals.each do |proposal| %>
-					<li <%= "class='suspended'" unless proposal.approved %>>
-						<%= link_to proposal.title, [:admin, theme, proposal] %>
-						(<%= proposal.impact %>)
-						<%= link_to 'Edit', edit_admin_theme_proposal_path(theme, proposal), :class => 'button' %>
-					</li>
-				<% end %>
-			</ul>
-		<% end %>
+		<%= render :partial => "admin/proposals/list", :locals => {:theme => theme} %>
 	</td>
   </tr>
 <% end %>
