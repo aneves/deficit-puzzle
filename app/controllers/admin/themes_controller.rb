@@ -25,6 +25,9 @@ class Admin::ThemesController < AdminController
   # POST /admin/themes
   def create
     @theme = Theme.new(params[:theme])
+    # GAH! Does not save... how did this break? D:
+    # Need internet to fix it, I can't boot up debugger without it.
+    @theme.approved = true
 
     if @theme.save
       redirect_to admin_themes_path, :notice => 'Theme was successfully created.'
@@ -38,7 +41,7 @@ class Admin::ThemesController < AdminController
     @theme = Theme.find(params[:id])
 
     if @theme.update_attributes(params[:theme])
-      redirect_to [:admin, @theme], :notice => 'Theme was successfully updated.'
+      redirect_to [:admin, :root], :notice => 'Theme was successfully updated.'
     else
       render :action => "edit"
     end

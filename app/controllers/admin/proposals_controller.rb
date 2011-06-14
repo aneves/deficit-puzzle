@@ -31,7 +31,7 @@ class Admin::ProposalsController < AdminController
     @proposal.theme = theme
 
     if @proposal.save
-      redirect_to admin_theme_proposals_path, :notice => 'Proposal was successfully created.'
+      redirect_to [:admin, :root], :notice => 'Proposal was successfully created.'
     else
       render :action => "new"
     end
