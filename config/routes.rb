@@ -4,11 +4,15 @@ DeficitPuzzle::Application.routes.draw do
     root :to => 'themes#index'
 	resources :themes do
 		root :to => 'themes#index'
+    member do
+      get 'approve'
+      get 'suspend'
+	  end
 		resources :proposals do
 		  member do
-			get 'approve'
-			get 'suspend'
-		  end
+        get 'approve'
+        get 'suspend'
+      end
 		end
 	end
   end

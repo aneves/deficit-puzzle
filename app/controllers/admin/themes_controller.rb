@@ -51,4 +51,22 @@ class Admin::ThemesController < AdminController
 
     redirect_to admin_themes_url
   end
+
+  # GET /admin/theme/:id/approve
+  def approve
+    theme = Theme.find(params[:id])
+    theme.approved = true
+    theme.save!
+    
+    redirect_to [:admin, :root], :notice => 'Theme was approved.'
+  end
+
+  # GET /admin/theme/:id/suspend
+  def suspend
+    theme = Theme.find(params[:id])
+    theme.approved = false
+    theme.save!
+    
+    redirect_to [:admin, :root], :notice => 'Theme was suspended.'
+  end
 end
