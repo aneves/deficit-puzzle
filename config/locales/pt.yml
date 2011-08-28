@@ -14,12 +14,17 @@
   confirm: "De certeza?"
   Back: "Atrás"
   theme:
+    _: "Tema"
+    n:
+      one: "1 tema"
+      other: "%{count} temas"
     New: "Novo tema"
     List: "Listando temas"
     Destroy_permanently: "Remover este tema permanentemente."
     Editing: "Editando tema"
   Proposals: "Propostas"
   proposal:
+    _: "Proposta"
     Editing: "Editando proposta"
     n:
       one: "1 proposta"
@@ -28,9 +33,28 @@
     List: "Listando propostas"
     Title: "Título"
     Description: "Descrição"
-    Impact: "Impato"
+    Impact: "Impacto"
     Approved: "Aprovada"
     Approved?: "Aprovada?"
     Destroy_permanently: "Remover permanentemente esta proposta."
   suspend: "suspender"
   approve: "aprovar"
+  created: "%{model} foi aprovada com sucesso."
+  updated: "%{model} foi actualizada com sucesso."
+  approved: "%{model} foi aprovada com sucesso."
+  suspended: "%{model} foi suspendida com sucesso."
+  activerecord:
+    models:
+      theme: "Tema"
+      proposal: "Proposta"
+    attributes:
+      theme:
+        title: "Título"
+      proposal:
+        title: "Título"
+        description: "Descrição"
+        impact: "Impacto"
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Actualizar %{model}"

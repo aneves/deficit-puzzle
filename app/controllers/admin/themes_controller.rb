@@ -30,7 +30,7 @@ class Admin::ThemesController < AdminController
     @theme.approved = true
 
     if @theme.save
-      redirect_to admin_themes_path, :notice => 'Theme was successfully created.'
+      redirect_to admin_themes_path, :notice => t(:created, :model => t("theme._"))
     else
       render :action => "new"
     end
@@ -41,7 +41,7 @@ class Admin::ThemesController < AdminController
     @theme = Theme.find(params[:id])
 
     if @theme.update_attributes(params[:theme])
-      redirect_to [:admin, :root], :notice => 'Theme was successfully updated.'
+      redirect_to [:admin, :root], :notice => t(:updated, :model => t("theme._"))
     else
       render :action => "edit"
     end
@@ -61,7 +61,7 @@ class Admin::ThemesController < AdminController
     theme.approved = true
     theme.save!
     
-    redirect_to [:admin, :root], :notice => 'Theme was approved.'
+    redirect_to [:admin, :root], :notice => t(:approved, :model => t("theme._"))
   end
 
   # GET /admin/theme/:id/suspend
@@ -70,6 +70,6 @@ class Admin::ThemesController < AdminController
     theme.approved = false
     theme.save!
     
-    redirect_to [:admin, :root], :notice => 'Theme was suspended.'
+    redirect_to [:admin, :root], :notice => t(:suspended, :model => t("theme._"))
   end
 end

@@ -17,12 +17,17 @@ en:
   confirm: "Are you sure?"
   Back: "Back"
   theme:
+    _: "Theme"
+    n:
+      one: "1 theme"
+      other: "%{count} themes"
     New: "New theme"
     List: "Listing themes"
     Destroy_permanently: "Permanently remove this theme"
     Editing: "Editing theme"
   Proposals: "Proposals"
   proposal:
+    _: "Proposal"
     Editing: "Editing proposal"
     n:
       one: "1 proposal"
@@ -37,3 +42,22 @@ en:
     Destroy_permanently: "Permanently remove this proposal."
   suspend: "suspend"
   approve: "approve"
+  created: "%{model} was successfully created."
+  updated: "%{model} was successfully updated."
+  approved: "%{model} was successfully approved."
+  suspended: "%{model} was successfully suspended."
+  activerecord:
+#    models:
+#      theme: "Theme"
+#      proposal: "Proposal"
+#    attributes:
+#      theme:
+#        title: "Título"
+#      proposal:
+#        title: "Título"
+#        description: "Descrição"
+#        impact: "Impacto"
+  helpers:
+    submit:
+#      create: "Create %{model}"
+#      update: "Update %{model}"

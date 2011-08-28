@@ -11,7 +11,7 @@
 </p>
 
 <%# TODO: count inner (approved) proposals instead. %>
-<h2><%= pluralize @themes.length, 'theme' %></h2>
+<h2><%=t "theme.n", :count => @themes.length %></h2>
 <% if @themes.any? %>
 	<table>
 		<tbody>

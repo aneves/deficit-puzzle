@@ -31,7 +31,7 @@ class Admin::ProposalsController < AdminController
     @proposal.theme = theme
 
     if @proposal.save
-      redirect_to [:admin, :root], :notice => 'Proposal was successfully created.'
+      redirect_to [:admin, :root], :notice => t(:created, :model => t("proposal._"))
     else
       render :action => "new"
     end
@@ -42,7 +42,7 @@ class Admin::ProposalsController < AdminController
     @proposal = Proposal.find(params[:id])
 
     if @proposal.update_attributes(params[:proposal])
-      redirect_to [:admin, @proposal.theme, @proposal], :notice => 'Proposal was successfully updated.'
+      redirect_to [:admin, @proposal.theme, @proposal], :notice => t(:updated, :model => t("proposal._"))
     else
       render :action => "edit"
     end
@@ -62,7 +62,7 @@ class Admin::ProposalsController < AdminController
     proposal.approved = true
     proposal.save!
     
-    redirect_to [:admin, @theme, proposal], :notice => 'Proposal was approved.'
+    redirect_to [:admin, @theme, proposal], :notice => t(:approved, :model => t("proposal._"))
   end
 
   # GET /admin/theme/:theme_id/proposals/:id/suspend
@@ -71,7 +71,7 @@ class Admin::ProposalsController < AdminController
     proposal.approved = false
     proposal.save!
     
-    redirect_to [:admin, @theme, proposal], :notice => 'Proposal was suspended.'
+    redirect_to [:admin, @theme, proposal], :notice => t(:suspended, :model => t("proposal._"))
   end
   
   protected
