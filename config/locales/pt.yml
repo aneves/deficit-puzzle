@@ -1,0 +1,36 @@
+pt:
+  html_title: DeficitPuzzle
+  title: "Deficit puzzle: tu consertas o orçamento"
+  to_admin: "ir para administração"
+  to_frontpage: "ir para página principal"
+  Admin: "Administração"
+  Progress: "Progressão"
+  save_errors:
+    one: "1 erro impediu este item de ser salvo"
+    other: "%{count} erros impediram este item de ser salvo"
+  Show: "Mostrar"
+  Edit: "Editar"
+  Destroy: "Remover"
+  confirm: "De certeza?"
+  Back: "Atrás"
+  theme:
+    New: "Novo tema"
+    List: "Listando temas"
+    Destroy_permanently: "Remover este tema permanentemente."
+    Editing: "Editando tema"
+  Proposals: "Propostas"
+  proposal:
+    Editing: "Editando proposta"
+    n:
+      one: "1 proposta"
+      other: "%{count} propostas"
+    New: "Nova proposta"
+    List: "Listando propostas"
+    Title: "Título"
+    Description: "Descrição"
+    Impact: "Impato"
+    Approved: "Aprovada"
+    Approved?: "Aprovada?"
+    Destroy_permanently: "Remover permanentemente esta proposta."
+  suspend: "suspender"
+  approve: "aprovar"
