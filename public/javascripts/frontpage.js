@@ -1,5 +1,10 @@
 $("input:checkbox").live("click", function(){
 	updateTotal();
+	if( $(this).is(":checked") ) {
+		$(this).closest("li").addClass("selected");
+	} else {
+		$(this).closest("li").removeClass("selected");
+	}
 });
 
 $(document).ready(function(){
