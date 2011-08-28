@@ -13,23 +13,20 @@
 <%# TODO: count inner (approved) proposals instead. %>
 <h2><%=t "theme.n", :count => @themes.length %></h2>
 <% if @themes.any? %>
-	<table>
-		<tbody>
-			<% @themes.each do |theme| %>
-				<tr><th><%= theme.title %></th></tr>
-				<tr><td>
-				<% if theme.proposals.any? %>
-					<ul>
-					<% theme.proposals.each do |proposal| %>
-						<li><label>
-							<input type="checkbox" value="<%= proposal.impact %>" />
-							<%= proposal.title %> (<%= proposal.impact %>)
-						</label></li>
+	<% @themes.each do |theme| %>
+		<h3><%= theme.title %></h3>
+		<% if theme.proposals.any? %>
+			<ul class="proposals">
+			<% theme.proposals.each do |proposal| %>
+				<li><label>
+					<input type="checkbox" value="<%= proposal.impact %>" />
+					<%= proposal.title %> (<%= proposal.impact %>)
+					<% unless proposal.description.blank? %>
+						<span class="description"><%= proposal.description %></span>
 					<% end %>
-					</ul>
-				<% end %>
-				</td></tr>
+				</label></li>
 			<% end %>
-		</tbody>
-	</table>
+			</ul>
+		<% end %>
+	<% end %>
 <% end %>
