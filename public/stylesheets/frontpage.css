@@ -25,7 +25,7 @@ ul label {
 ul label {
 	border-radius: 3px;
 	padding: 5px;
-	background: #EEE;
+	background: #E0E0E0;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -35,7 +35,7 @@ ul li+li {
 }
 
 ul label:hover {
-	background: #DDD;
+	background: #D0D0D0;
 }
 
 ul.proposals .description {

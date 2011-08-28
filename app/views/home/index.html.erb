@@ -1,14 +1,16 @@
 <h1><%=t :title %></h1>
 
-<h2><%=t :Progress %></h2>
-<p id="status">
-	<span class="progress">
-		<span class="amount">0</span>/<span class="target"><%= @target %></span>
-		<%= @units %>
-	</span>
-	<span class="graph"><span class="bar">&nbsp;</span></span>
-	<span class="percent">0%</span>
-</p>
+<div id="progress">
+	<h2><%=t :Progress %></h2>
+	<p>
+		<span class="progress">
+			<span class="amount">0</span>/<span class="target"><%= @target %></span>
+			<%= @units %>
+		</span>
+		<span class="graph"><span class="bar">&nbsp;</span></span>
+		<span class="percent">0%</span>
+	</p>
+</div>
 
 <%# TODO: count inner (approved) proposals instead. %>
 <h2><%=t "theme.n", :count => @themes.length %></h2>

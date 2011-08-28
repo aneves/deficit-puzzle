@@ -1,4 +1,16 @@
-body { background-color: #fff; color: #333; }
+html,
+body {
+	background-color: #E8E8E8;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+body>div#page {
+	background-color: #f0f0f0;
+	width: 920px; /* 920+40=960 */
+	margin: 0 auto;
+	padding: 10px 20px;
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;

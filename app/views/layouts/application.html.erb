@@ -9,9 +9,11 @@
 </head>
 <body>
 
-<%= link_to t(:to_admin), :admin_root, :class => 'static_message button' %>
+<div id="page">
+	<%= link_to t(:to_admin), :admin_root, :class => 'static_message button' %>
 
-<%= yield %>
+	<%= yield %>
+</div>
 
 </body>
 </html>
