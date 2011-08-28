@@ -39,7 +39,7 @@
     Destroy_permanently: "Remover permanentemente esta proposta."
   suspend: "suspender"
   approve: "aprovar"
-  created: "%{model} foi aprovada com sucesso."
+  created: "%{model} foi criada com sucesso."
   updated: "%{model} foi actualizada com sucesso."
   approved: "%{model} foi aprovada com sucesso."
   suspended: "%{model} foi suspendida com sucesso."
