@@ -1,26 +1,26 @@
 <h2><%= @proposal.title %></h2>
 
 <p>
-  <b>Description:</b>
+  <b><%=t "proposal.Description" %>:</b>
   <%= @proposal.description %>
 </p>
 
 <p>
-  <b>Impact:</b>
+  <b><%=t "proposal.Impact" %>:</b>
   <%= @proposal.impact %>
 </p>
 
 <p>
-  <b>Approved:</b>
+  <b><%=t "proposal.Approved" %>:</b>
   <%= @proposal.approved %>
 </p>
 
 
-<%= link_to 'Edit', edit_admin_theme_proposal_path(@theme, @proposal), :class => 'button' %>
+<%= link_to t(:Edit), edit_admin_theme_proposal_path(@theme, @proposal), :class => 'button' %>
 <%= if @proposal.approved
 then
-	link_to "suspend", suspend_admin_theme_proposal_path(@theme, @proposal), :class => 'button'
+	link_to t(:suspend), suspend_admin_theme_proposal_path(@theme, @proposal), :class => 'button'
 else
-	link_to "approve", approve_admin_theme_proposal_path(@theme, @proposal), :class => 'button'
+	link_to t(:approve), approve_admin_theme_proposal_path(@theme, @proposal), :class => 'button'
 end %>
-<%= link_to 'Back', admin_themes_path, :class => 'button' %>
+<%= link_to t(:Back), admin_themes_path, :class => 'button' %>

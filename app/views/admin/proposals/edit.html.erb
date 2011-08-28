@@ -1,6 +1,6 @@
-<h2>Editing proposal</h2>
+<h2><%=t "proposal.Editing" %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [:admin, @theme, @proposal], :class => 'button' %>
-<%= link_to 'Back', admin_themes_path, :class=> 'button' %>
+<%= link_to t(:Show), [:admin, @theme, @proposal], :class => 'button' %>
+<%= link_to t(:Back), admin_themes_path, :class=> 'button' %>

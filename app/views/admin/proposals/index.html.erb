@@ -1,11 +1,11 @@
-<h2>Listing proposals</h2>
+<h2><%=t "proposal.List"%></h2>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Impact</th>
-    <th>Approved?</th>
+    <th><%=t "proposal.Title"%></th>
+    <th><%=t "proposal.Description"%></th>
+    <th><%=t "proposal.Impact"%></th>
+    <th><%=t "proposal.Approved?"%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,19 +18,19 @@
     <td><%= proposal.impact %></td>
 	<td><%= if proposal.approved
 then
-link_to "suspend", suspend_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button'
+link_to t(:suspend), suspend_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button'
 else
-link_to "approve", approve_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button'
+link_to t(:approve), approve_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button'
 end
 %></td>
-    <td><%= link_to 'Show', [:admin, proposal.theme, proposal], :class => 'button' %></td>
-    <td><%= link_to 'Edit', edit_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button' %></td>
-    <td><%= button_to 'Destroy', [:admin, proposal.theme, proposal], :method => :delete, :confirm => 'Are you sure?', :title => 'Permanently remove this proposal.' %></td>
+    <td><%= link_to t(:Show), [:admin, proposal.theme, proposal], :class => 'button' %></td>
+    <td><%= link_to t(:Edit), edit_admin_theme_proposal_path(proposal.theme, proposal), :class => 'button' %></td>
+    <td><%= button_to t(:Destroy), [:admin, proposal.theme, proposal], :method => :delete, :confirm => t(:confirm), :title => t("proposal.Destroy_permanently") %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Proposal', new_admin_theme_proposal_path, :class => 'button' %>
-<%= link_to 'Back', admin_themes_path, :class => 'button' %>
+<%= link_to t("proposal.New"), new_admin_theme_proposal_path, :class => 'button' %>
+<%= link_to t(:Back), admin_themes_path, :class => 'button' %>

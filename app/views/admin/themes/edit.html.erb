@@ -1,6 +1,6 @@
-<h2>Editing theme</h2>
+<h2><%= t "theme.Editing" %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [:admin, @theme] %> |
-<%= link_to 'Back', admin_themes_path %>
+<%= link_to :Show, [:admin, @theme] %> |
+<%= link_to :Back, admin_themes_path %>

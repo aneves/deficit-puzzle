@@ -2,4 +2,38 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  html_title: DeficitPuzzle
+  title: "Deficit puzzle: you fix the budget"
+  to_admin: "to administration"
+  to_frontpage: "to frontpage"
+  Admin: "Administration"
+  Progress: "Progress"
+  save_errors:
+    one: "1 error prohibited this item from being saved"
+    other: "%{count} errors prohibited this item from being saved"
+  Show: "Show"
+  Edit: "Edit"
+  Destroy: "Remove"
+  confirm: "Are you sure?"
+  Back: "Back"
+  theme:
+    New: "New theme"
+    List: "Listing themes"
+    Destroy_permanently: "Permanently remove this theme"
+    Editing: "Editing theme"
+  Proposals: "Proposals"
+  proposal:
+    Editing: "Editing proposal"
+    n:
+      one: "1 proposal"
+      other: "%{count} proposals"
+    New: "New proposal"
+    List: "Listing proposals"
+    Title: "Title"
+    Description: "Description"
+    Impact: "Impact"
+    Approved: "Approved"
+    Approved?: "Approved?"
+    Destroy_permanently: "Permanently remove this proposal."
+  suspend: "suspend"
+  approve: "approve"

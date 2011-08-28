@@ -1,7 +1,7 @@
 <h2><%= @theme.title %></h2>
 
-<h3>Proposals</h3>
+<h3><%=t :Proposals %></h3>
 <p>[TODO: list proposals]</p>
 
-<%= link_to 'Edit', edit_admin_theme_path(@theme) %> |
-<%= link_to 'Back', admin_themes_path %>
+<%= link_to t(:Edit), edit_admin_theme_path(@theme) %> |
+<%= link_to t(Back), admin_themes_path %>

@@ -1,5 +1,5 @@
-<%= pluralize theme.proposals.length, 'proposal' %>
-<%= link_to 'New Proposal', new_admin_theme_proposal_path(theme), :class => 'button' %>
+<%= t "proposal.n", :count => theme.proposals.length  %>
+<%= link_to t("proposal.New"), new_admin_theme_proposal_path(theme), :class => 'button' %>
 <% if theme.proposals.any? %>
 	<ul>
 		<% theme.proposals.each do |proposal| %>
@@ -7,11 +7,11 @@
 				<%= link_to proposal.title, [:admin, theme, proposal] %>
 				(<%= proposal.impact %>)
 				<%= if proposal.approved
-				      link_to "suspend", suspend_admin_theme_proposal_path(theme, proposal), :class => 'button'
+				      link_to t(:suspend), suspend_admin_theme_proposal_path(theme, proposal), :class => 'button'
 				    else
-				      link_to "approve", approve_admin_theme_proposal_path(theme, proposal), :class => 'button'
+				      link_to t(:approve), approve_admin_theme_proposal_path(theme, proposal), :class => 'button'
 				    end %>
-				<%= link_to 'Edit', edit_admin_theme_proposal_path(theme, proposal), :class => 'button' %>
+				<%= link_to t(:Edit), edit_admin_theme_proposal_path(theme, proposal), :class => 'button' %>
 			</li>
 		<% end %>
 	</ul>

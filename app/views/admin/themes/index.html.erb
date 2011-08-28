@@ -1,4 +1,4 @@
-<h2>Listing themes</h2>
+<h2><%=t "theme.List" %></h2>
 
 <table class="themes">
 <% @themes.each do |theme| %>
@@ -8,12 +8,12 @@
 	</th>
 	<td>
 		<%= if theme.approved
-		      link_to "suspend", suspend_admin_theme_path(theme), :class => 'button'
+		      link_to t(:suspend), suspend_admin_theme_path(theme), :class => 'button'
 		    else
-		      link_to "approve", approve_admin_theme_path(theme), :class => 'button'
+		      link_to t(:approve), approve_admin_theme_path(theme), :class => 'button'
 		    end %>
-		<%= link_to 'Edit', edit_admin_theme_path(theme), :class => 'button' %>
-		<%= button_to 'Destroy', [:admin, theme], :method => :delete, :confirm => 'Are you sure?', :title => 'Permanently remove this theme' %>
+		<%= link_to t(:Edit), edit_admin_theme_path(theme), :class => 'button' %>
+		<%= button_to t(:Destroy), [:admin, theme], :method => :delete, :confirm => t(:confirm), :title => t("theme.Destroy_permanently") %>
 	</td>
   </tr>
   <tr <%= "class='suspended'" unless theme.approved %>>
@@ -26,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New Theme', new_admin_theme_path, :class => 'button' %>
+<%= link_to t("theme.new"), new_admin_theme_path, :class => 'button' %>
