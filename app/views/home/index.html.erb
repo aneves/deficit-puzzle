@@ -18,11 +18,15 @@
 			<% @themes.each do |theme| %>
 				<tr><th><%= theme.title %></th></tr>
 				<tr><td>
-				<% theme.proposals.each do |proposal| %>
-					<li><label>
-						<input type="checkbox" value="<%= proposal.impact %>" />
-						<%= proposal.title %> (<%= proposal.impact %>)
-					</label></li>
+				<% if theme.proposals.any? %>
+					<ul>
+					<% theme.proposals.each do |proposal| %>
+						<li><label>
+							<input type="checkbox" value="<%= proposal.impact %>" />
+							<%= proposal.title %> (<%= proposal.impact %>)
+						</label></li>
+					<% end %>
+					</ul>
 				<% end %>
 				</td></tr>
 			<% end %>
