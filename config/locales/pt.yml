@@ -1,10 +1,10 @@
-pt:
+Ôªøpt:
   html_title: DeficitPuzzle
-  title: "Deficit puzzle: tu consertas o orÁamento"
-  to_admin: "ir para administraÁ„o"
-  to_frontpage: "ir para p·gina principal"
-  Admin: "AdministraÁ„o"
-  Progress: "Progress„o"
+  title: "Deficit puzzle: tu consertas o or√ßamento"
+  to_admin: "ir para administra√ß√£o"
+  to_frontpage: "ir para p√°gina principal"
+  Admin: "Administra√ß√£o"
+  Progress: "Progress√£o"
   save_errors:
     one: "1 erro impediu este item de ser salvo"
     other: "%{count} erros impediram este item de ser salvo"
@@ -12,7 +12,7 @@ pt:
   Edit: "Editar"
   Destroy: "Remover"
   confirm: "De certeza?"
-  Back: "Atr·s"
+  Back: "Atr√°s"
   theme:
     New: "Novo tema"
     List: "Listando temas"
@@ -26,8 +26,8 @@ pt:
       other: "%{count} propostas"
     New: "Nova proposta"
     List: "Listando propostas"
-    Title: "TÌtulo"
-    Description: "DescriÁ„o"
+    Title: "T√≠tulo"
+    Description: "Descri√ß√£o"
     Impact: "Impato"
     Approved: "Aprovada"
     Approved?: "Aprovada?"
